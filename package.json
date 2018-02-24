@@ -1,0 +1,9 @@
+{
+  "name": "windler-suessmost",
+  "repository": "https://dwin94@bitbucket.org/dwin94/windler-suessmost.git",
+  "author": "David <david.windler@windowslive.com>",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize-scss": "^7.0.1"
+  }
+}
