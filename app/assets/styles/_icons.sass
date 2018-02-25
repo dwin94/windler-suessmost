@@ -1,0 +1,51 @@
+/* Font license info
+ *
+ * ## Typicons
+ * (c) Stephen Hutchings 2012
+ * Author:    Stephen Hutchings
+ * License:   SIL (http://scripts.sil.org/OFL)
+ * Homepage:  http://typicons.com/
+ *
+ * ## Font Awesome
+ * Copyright (C) 2016 by Dave Gandy
+ * Author:    Dave Gandy
+ * License:   SIL ()
+ * Homepage:  http://fontawesome.github.com/Font-Awesome/ */
+
+
++font-face('fontello', '../icons/fontello', 'fontello', normal, normal)
+
+[class^="icon-"]:before, [class*=" icon-"]:before
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  speak: none
+
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  margin-right: .2em
+  text-align: center
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal
+  text-transform: none
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.icon-tint:before
+  content: '\e800'
+
+.icon-arrow-down:before
+  content: '\e801'
+
+.icon-apple:before
+  content: '\e803'
+
+.icon-gift:before
+  content: '\e804'
+
+.icon-handshake-o:before
+  content: '\f2b5'
