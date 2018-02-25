@@ -6,63 +6,73 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Suessmost, Süssmost, Braunau, Windler" />
     <meta name="description" content="Erfahren Sie alles über Windler Süssmost und weitere Produkte aus Braunau." />
+    <link rel="stylesheet" href="assets/dist/main.css" type="text/css" />
     <title>Erfahren Sie alles über Windler Süssmost</title>
   </head>
   <body>
     <header>
-      <div>
-        <img src="assets\images\header-apples.jpeg" alt="Reife Äpfel" />
-        <div>
-          <h1>Windler Süssmost</h1>
-          <h2>ein edles Getränk!</h2>
-          <button></button>
+      <div class="header">
+        <img src="assets/images/apples-header_2.jpg" alt="Reife Äpfel" />
+        <div class="header__circle">
+          <div class="header__text-content">
+            <h1 class="header__title">Windler<br />Süssmost</h1>
+            <h2 class="header__subtitle">ein edles Getränk!</h2>
+            <i class="header__down-icon">&darr;</i>
+          </div>
         </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#products"></a>Produkte</li>
-          <li><a href="#about"></a>Über uns</li>
-          <li><a href="#contact"></a>Kontakt</li>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__entry">
+            <a class="navigation__link" href="#products">Produkte</a>
+          </li>
+          <li class="navigation__entry">
+            <a class="navigation__link" href="#about">Über uns</a>
+          </li>
+          <li class="navigation__entry">
+            <a class="navigation__link" href="#contact">Kontakt</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="products">
+        <h1>Produkte</h1>
 
-        <section id="suessmost">
-          <img src="" alt="" />
-          <h1>Süssmost</h1>
-          <p>
-            Apfelsaft, Holdermost, ...
+        <section id="suessmost" class="product">
+          <img class="product__icon" src="" alt="" />
+          <h1 class="product__title">Süssmost</h1>
+          <p class="product__text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
           </p>
-          <img src="" alt="" />
+          <img class="product__image" src="assets/images/products/frischer-apfelsaft-tropft-vom-band.jpg" alt="Frischer Apfelsaft tropft von der Bandpresse">
           <!--TODO: show description on hover-->
         </section>
 
-        <section id="aepfel-ab-hof">
-          <img src="" alt="" />
-          <h1>Äpfel ab Hof</h1>
-          <p>
-            Äpfel, Birnen und Zwetschgen direkt ab Hof...
+        <section id="aepfel-ab-hof" class="product">
+          <img class="product__icon" src="" alt="" />
+          <h1 class="product__title">Äpfel ab Hof</h1>
+          <p class="product__text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
           </p>
-          <img src="" alt="" />
+          <img class="product__image" src="" alt="" />
         </section>
 
-        <section id="kundenmosterei">
-          <img src="" alt="" />
-          <h1>KundenMosterei</h1>
-          <p>
-            Sie haben die Äpfel, wir holen das Beste raus - einen feinen Süssmost...
+        <section id="kundenmosterei" class="product">
+          <img class="product__icon" src="" alt="" />
+          <h1 class="product__title">Kundenmosterei</h1>
+          <p class="product__text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
           </p>
-          <img src="" alt="" />
+          <img class="product__image" src="" alt="" />
         </section>
 
-        <section id="verschenken">
-          <img src="" alt="" />
-          <h1>Verschenken</h1>
-          <p>
-            Geschenkkistli und Geschenkkörbe ...
+        <section id="verschenken" class="product">
+          <img class="product__icon" src="" alt="" />
+          <h1 class="product__title">Verschenken</h1>
+          <p class="product__image" class="product__text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
           </p>
           <img src="" alt="" />
         </section>
@@ -115,6 +125,7 @@
 
     <footer>
       <!--TODO-->
+      <small>Titelbild von http://maxpixel.freegreatpicture.com/Apples-Crate-Orchard-Fruit-379871</small>
     </footer>
   </body>
 </html>
