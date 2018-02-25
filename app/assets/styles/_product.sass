@@ -3,67 +3,111 @@
   &__title
     +section-orange
     text-align: center
-    margin: 0
-    padding: 30px 0 50px
+    margin: 0 0 -1px
+    padding: 30px 0 0
 
 .product
-  padding: 0 20px
+  +section-orange
+  padding: 35px 20px
   min-height: 400px
+  margin-bottom: -1px
+  +atMedium
+    padding: 15px 20px
 
-  &:nth-of-type(odd)
-    +section-orange
+  &__icon,
+  &__title,
+  &__text,
+    text-align: center
+    width: 100%
 
-  &:nth-of-type(even)
-    +section-white
+
+  &:nth-of-type(odd) &__icon,
+  &:nth-of-type(odd) &__title,
+  &:nth-of-type(odd) &__text,
+    +minMedium
+      text-align: right
+
+  &:nth-of-type(even) &__icon,
+  &:nth-of-type(even) &__title,
+  &:nth-of-type(even) &__text,
+    +minMedium
+      text-align: left
 
   &__icon
     font-size: 60px
-    width: 100%
 
   &__title
-    +section-title-font
-    width: 100%
+    +roboto-bold
+    font-size: 30px
+    letter-spacing: .3px
+    margin: 10px 0 0
+    +atMedium
+      font-size: 34px
+    +atLarge
+      font-size: 38px
+      margin-top: 20px
 
   &__text
-    +section-text-font
-    width: 100%
+    +roboto-regular
+    font-size: 20px
+    max-width: 500px
+    margin: 20px auto 0
+    +atMedium
+      font-size: 22px
+    +atLarge
+      font-size: 24px
+      margin: 20px 0 0
 
   &__image
     width: 100%
     max-width: 400px
     margin: auto
     height: auto
-    box-shadow: 5px 5px 20px 0px $black
+    box-shadow: 5px 5px 20px 0px $orange-shadow
+    +minMedium
+      margin-bottom: -30px
 
   &:nth-of-type(odd) &__image
-    transform: rotate(10deg)
+    transform: rotate(5deg)
+    +atLarge
+      margin: auto auto -30px 5vw
 
   &:nth-of-type(even) &__image
     transform: rotate(-7deg)
+    +atLarge
+      margin: auto 5vw -30px auto
 
 .columns
   display: flex
   flex-wrap: wrap
 
-  &__column-wide,
-  &__column-narrow
+  &__column-text,
+  &__column-image
     display: flex
     align-items: center
     box-sizing: border-box
 
-  &__column-wide
+  &__column-text
     width: 100%
     display: flex
     flex-wrap: wrap
     align-content: flex-end
     padding: 20px
     +minMedium
-      width: 60%
+      width: 50%
 
-  &__column-narrow
+  &__column-image
     width: 100%
-    padding: 50px
+    padding: 25px
     order: 2
+    +atSmall
+      padding: 40px
     +minMedium
-      width: 40%
-      order: 1
+      width: 50%
+      order: 0
+      padding: 40px
+      align-content: flex-end
+
+  &:nth-of-type(odd) &__column-text,
+    +minMedium
+      justify-content: flex-end
