@@ -9,23 +9,25 @@
 +font-face('RobotoBold', '../fonts/roboto-v18-latin-900', 'Roboto', 900, normal)
 +font-face('RobotoRegular', '../fonts/roboto-v18-latin-regular', 'Roboto', normal, normal)
 
-=title-font
-  font-family: 'RobotoBold', sans-serif
-  font-size: 35px
-  line-height: 45px
-  text-transform: uppercase
-  letter-spacing: 1px
 
-=navigation-font
-  font-family: 'RobotoBold', sans-serif
-  font-size: 20px
+
+/* Chrome browser doesn't need to download font files */
+=roboto-bold()
+  font-family: Roboto, 'RobotoBold', sans-serif
+  font-weight: 900
+
+=roboto-regular()
+  font-family: Roboto, 'RobotoRegular', sans-serif
+  font-weight: 400
+
+
+
 
 =section-title-font
-  font-family: 'RobotoBold', sans-serif
+  +roboto-bold
   font-size: 30px
-  line-height: 10px
   letter-spacing: .3px
 
 =section-text-font
-  font-family: 'RobotoRegular', sans-serif
+  +roboto-regular
   font-size: 20px

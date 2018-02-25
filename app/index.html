@@ -12,12 +12,18 @@
   <body>
     <header>
       <div class="header">
-        <img src="assets/images/apples-header_2_tiny.jpg" alt="Reife Äpfel" />
+        <picture>
+          <source srcset="assets/images/apples-header_rotate_tiny.jpg" media="(max-width: 500px)">
+          <source srcset="assets/images/apples-header_tiny.jpg" />
+          <img class="header__image" src="assets/images/apples-header_tiny.jpg" alt="Reife Äpfel" />
+        </picture>
         <div class="header__circle">
           <div class="header__text-content">
             <h1 class="header__title">Windler<br />Süssmost</h1>
-            <h2 class="header__subtitle">ein edles Getränk!</h2>
-            <i class="header__down-icon icon-arrow-down"></i>
+            <h2 class="header__subtitle">ein edles<br /> Getränk!</h2>
+            <a href="#products">
+              <i class="header__down-icon icon-arrow-down"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -38,7 +44,7 @@
 
     <main>
       <section id="products">
-        <h1>Produkte</h1>
+        <h1 class="products__title">Produkte</h1>
 
         <section id="suessmost" class="product columns">
           <div class="columns__column-wide">
@@ -95,34 +101,36 @@
 
       </section>
 
-      <section id="about">
-        <h1>Über uns</h1>
-        <p>
+      <section id="about" class="additional-section">
+        <h1 class="additional-section__title">Über uns</h1>
+        <p class="additional-section__text">
           Oberhalb von Braunau...
         </p>
-        <h2>Verkaufsorte</h2>
-        <div>
-          <div>
-            <img src="" alt="" />
-            <p>Direkt ab Hof</p>
-          </div>
-          <div>
-            <img src="" alt="" />
-            <p>Dorfmarkt VITAplus<br />Wuppenau</p>
-          </div>
-          <div>
-            <img src="" alt="" />
-            <p>Dorfmarkt Zentrum<br />Tobel</p>
+        <h2 class="additional-section__subtitle">Verkaufsorte</h2>
+        <div class="three-columns">
+          <div class="desktop-columns_mobile-rows">
+            <div>
+              <img src="" alt="" />
+              <p>Direkt ab Hof</p>
+            </div>
+            <div>
+              <img src="" alt="" />
+              <p>Dorfmarkt VITAplus<br />Wuppenau</p>
+            </div>
+            <div>
+              <img src="" alt="" />
+              <p>Dorfmarkt Zentrum<br />Tobel</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact">
-        <h1>Kontakt</h1>
-        <p>
+      <section id="contact" class="additional-section">
+        <h1 class="additional-section__title">Kontakt</h1>
+        <p class="additional-section__text">
           Bei Fragen oder Bestellungen können Sie uns folgendermassen erreichen:
         </p>
-        <div>
+        <div class="desktop-columns_mobile-rows">
           <div>
             <img src="" alt="" />
             <a href="tel:0719117647" rel="nofollow">071 911 76 47</a>

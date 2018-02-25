@@ -1,43 +1,69 @@
+.products
+
+  &__title
+    +section-orange
+    text-align: center
+    margin: 0
+    padding: 30px 0 50px
+
 .product
   padding: 0 20px
-  min-height: 500px
+  min-height: 400px
 
   &:nth-of-type(odd)
-    background: $orange
-    color: $white
+    +section-orange
+
+  &:nth-of-type(even)
+    +section-white
 
   &__icon
+    font-size: 60px
+    width: 100%
 
   &__title
     +section-title-font
+    width: 100%
 
   &__text
     +section-text-font
+    width: 100%
 
   &__image
-    width: 300px
+    width: 100%
+    max-width: 400px
+    margin: auto
     height: auto
     box-shadow: 5px 5px 20px 0px $black
 
   &:nth-of-type(odd) &__image
     transform: rotate(10deg)
-    margin-left: 20px
 
   &:nth-of-type(even) &__image
     transform: rotate(-7deg)
-    margin-right: 20px
 
 .columns
   display: flex
+  flex-wrap: wrap
 
   &__column-wide,
   &__column-narrow
     display: flex
     align-items: center
+    box-sizing: border-box
 
   &__column-wide
-    flex: 1 1 60%
+    width: 100%
+    display: flex
     flex-wrap: wrap
+    align-content: flex-end
+    padding: 20px
+    +minMedium
+      width: 60%
 
   &__column-narrow
-    flex: 1 1 40%
+    width: 100%
+    padding: 50px
+    order: 2
+    +minMedium
+      width: 40%
+      order: 1
