@@ -71,6 +71,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/js/main.js":
+/*!*******************************!*\
+  !*** ./app/assets/js/main.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("window.console.log('test');\r\n\n\n//# sourceURL=webpack:///./app/assets/js/main.js?");
+
+/***/ }),
+
 /***/ "./app/assets/styles/main.sass":
 /*!*************************************!*\
   !*** ./app/assets/styles/main.sass ***!
@@ -83,13 +94,13 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./ap
 /***/ }),
 
 /***/ 0:
-/*!*******************************************!*\
-  !*** multi ./app/assets/styles/main.sass ***!
-  \*******************************************/
+/*!*******************************************************************!*\
+  !*** multi ./app/assets/js/main.js ./app/assets/styles/main.sass ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! ./app/assets/styles/main.sass */\"./app/assets/styles/main.sass\");\n\n\n//# sourceURL=webpack:///multi_./app/assets/styles/main.sass?");
+eval("__webpack_require__(/*! ./app/assets/js/main.js */\"./app/assets/js/main.js\");\nmodule.exports = __webpack_require__(/*! ./app/assets/styles/main.sass */\"./app/assets/styles/main.sass\");\n\n\n//# sourceURL=webpack:///multi_./app/assets/js/main.js_./app/assets/styles/main.sass?");
 
 /***/ })
 

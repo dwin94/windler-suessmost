@@ -4,11 +4,11 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
-    // './app.js',
+    './app/assets/js/main.js',
     './app/assets/styles/main.sass'
   ],
   output: {
-    path: __dirname + '/app/assets/dist/css',
+    path: __dirname + '/app/assets/dist',
   },
   module: {
     rules: [
