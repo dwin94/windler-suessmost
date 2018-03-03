@@ -1,5 +1,9 @@
 .additional-section
+  +padding-top
   text-align: center
+  padding-left: $side-padding
+  padding-right: $side-padding
+  padding-bottom: 40px
 
   &:nth-of-type(odd)
     +section-orange
@@ -8,12 +12,21 @@
     +section-white
 
   &__title
+    +title-font-size
     margin: 0
 
   &__subtitle
+    +subtitle-font-size
 
   &__text
+    +text-font-size
+    margin-bottom: 30px
 
 .desktop-columns_mobile-rows
   display: flex
-  justify-content: space-around
+  flex-direction: column
+  max-width: $max-width
+  margin: auto
+  +minMedium
+    flex-direction: row
+    justify-content: space-around

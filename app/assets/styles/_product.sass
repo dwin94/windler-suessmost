@@ -2,17 +2,21 @@
 
   &__title
     +section-orange
+    +padding-top
+    +title-font-size
     text-align: center
     margin: 0 0 -1px
-    padding: 30px 0 0
 
 .product
   +section-orange
-  padding: 35px 20px
+  padding: 35px $side-padding
   min-height: 400px
   margin-bottom: -1px
   +atMedium
     padding: 15px 20px
+
+  &:last-of-type
+    padding-bottom: 100px
 
   &__icon,
   &__title,
@@ -34,28 +38,19 @@
       text-align: left
 
   &__icon
-    font-size: 60px
+    +icon-font-size
 
   &__title
-    +roboto-bold
-    font-size: 30px
-    letter-spacing: .3px
+    +subtitle-font-size
     margin: 10px 0 0
-    +atMedium
-      font-size: 34px
     +atLarge
-      font-size: 38px
       margin-top: 20px
 
   &__text
-    +roboto-regular
-    font-size: 20px
+    +text-font-size
     max-width: 500px
     margin: 20px auto 0
-    +atMedium
-      font-size: 22px
     +atLarge
-      font-size: 24px
       margin: 20px 0 0
 
   &__image

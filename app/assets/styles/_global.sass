@@ -1,3 +1,8 @@
+$side-padding: 20px
+$top-padding-large: 50px
+$top-padding-medium: 30px
+$max-width: 1200px
+
 body
   +roboto-regular
   font-size: 20px
@@ -15,3 +20,41 @@ img
 =section-white()
   background: $white
   color: $orange
+
+=padding-top()
+  padding-top: $top-padding-medium
+  +atLarge
+    padding-top: $top-padding-large
+
+=title-font-size()
+  +roboto-regular
+  font-weight: 700
+  font-size: 40px
+  +atMedium
+    font-size: 45px
+  +atLarge
+    font-size: 50px
+
+=subtitle-font-size()
+  +roboto-bold
+  font-size: 30px
+  letter-spacing: .3px
+  +atMedium
+    font-size: 34px
+  +atLarge
+    font-size: 38px
+
+=text-font-size()
+  +roboto-regular
+  font-size: 20px
+  +atMedium
+    font-size: 22px
+  +atLarge
+    font-size: 24px
+
+=icon-font-size()
+  font-size: 45px
+  +atMedium
+    font-size: 55px
+  +atLarge
+    font-size: 60px

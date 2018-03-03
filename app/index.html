@@ -15,7 +15,7 @@
         <picture>
           <source srcset="assets/images/apples-header_rotate_tiny.jpg" media="(max-width: 500px)">
           <source srcset="assets/images/apples-header_tiny.jpg" />
-          <img class="header__image" src="assets/images/apples-header_tiny.jpg" alt="Reife Äpfel" />
+          <img class="header__image" src="assets/images/apples-header_rotate_tiny.jpg" alt="Reife Äpfel" />
         </picture>
         <div class="header__circle">
           <div class="header__text-content">
@@ -43,7 +43,7 @@
     </header>
 
     <main>
-      <section id="products">
+      <section id="products" class="products">
         <h1 class="products__title">Produkte</h1>
 
         <section id="suessmost" class="product columns">
@@ -111,15 +111,15 @@
           <div class="desktop-columns_mobile-rows">
             <div>
               <img src="" alt="" />
-              <p>Direkt ab Hof</p>
+              <p class="additional-section__text">Direkt ab Hof</p>
             </div>
             <div>
               <img src="" alt="" />
-              <p>Dorfmarkt VITAplus<br />Wuppenau</p>
+              <p class="additional-section__text">Dorfmarkt VITAplus<br />Wuppenau</p>
             </div>
             <div>
               <img src="" alt="" />
-              <p>Dorfmarkt Zentrum<br />Tobel</p>
+              <p class="additional-section__text">Dorfmarkt Zentrum<br />Tobel</p>
             </div>
           </div>
         </div>
@@ -131,17 +131,17 @@
           Bei Fragen oder Bestellungen können Sie uns folgendermassen erreichen:
         </p>
         <div class="desktop-columns_mobile-rows">
-          <div>
-            <img src="" alt="" />
-            <a href="tel:0719117647" rel="nofollow">071 911 76 47</a>
+          <div class="contact">
+            <i class="contact__icon icon-phone-outline"></i>
+            <a class="contact__link" href="tel:0719117647" rel="nofollow">071 911 76 47</a>
           </div>
-          <div>
-            <img src="" alt="" />
-            <a href="mailto:windler.suemo@bluewin.ch">windler.suemo@bluewin.ch</a>
+          <div class="contact">
+            <i class="contact__icon icon-mail"></i>
+            <a class="contact__link" href="mailto:windler.suemo@bluewin.ch">windler.suemo@bluewin.ch</a>
           </div>
-          <div>
-            <img src="" alt="" />
-            <a href="https://www.google.ch/maps/place/Windler+Max+und+Uta/@47.4961165,9.0655954,13.48z/data=!4m12!1m6!3m5!1s0x479aeea4e7513333:0x85b75cf963d37d7e!2sWindler+Max+und+Uta!8m2!3d47.4956325!4d9.0812881!3m4!1s0x479aeea4e7513333:0x85b75cf963d37d7e!8m2!3d47.4956325!4d9.0812881">Max und Uta Windler<br />Heid 320<br />9502 Braunau</a>
+          <div class="contact">
+            <i class="contact__icon icon-map-o"></i>
+            <a class="contact__link" href="https://www.google.ch/maps/place/Windler+Max+und+Uta/@47.4961165,9.0655954,13.48z/data=!4m12!1m6!3m5!1s0x479aeea4e7513333:0x85b75cf963d37d7e!2sWindler+Max+und+Uta!8m2!3d47.4956325!4d9.0812881!3m4!1s0x479aeea4e7513333:0x85b75cf963d37d7e!8m2!3d47.4956325!4d9.0812881">Max und Uta Windler<br />Heid 320<br />9502 Braunau</a>
           </div>
         </div>
       </section>

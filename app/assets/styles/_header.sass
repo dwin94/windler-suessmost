@@ -1,9 +1,12 @@
+$circle-min-size: 220px
+$circle-size: 42vw
+
 .header
   position: relative
   max-height: 600px
-  min-height: 250px
-  height: 50vw
-  overflow-y: hidden
+  min-height: 300px
+  height: 54vw
+  overflow: hidden
 
   &__image
     width: 100%
@@ -15,13 +18,13 @@
     transform: translate(-50%, -50%)
     background-color: $white-transparent
     border-radius: 50%
-    width: 190px
-    height: 190px
+    width: $circle-min-size
+    height: $circle-min-size
     max-width: 500px
     max-height: 500px
     +minSmall
-      width: 40vw
-      height: 40vw
+      width: $circle-size
+      height: $circle-size
 
   &__text-content
     position: absolute
@@ -43,7 +46,7 @@
       margin-top: 35px
     +atMedium
       font-size: 40px
-      margin-top: 50px
+      margin-top: 8vw
     +atLarge
       font-size: 60px
       margin-top: 60px
@@ -55,9 +58,10 @@
     letter-spacing: 2px
     color: $green
     transform: rotate(-6deg) scaleX(1.2)
-    margin: 0
+    margin-top: 10px
     +atSmall
-      margin-top: 1vw
+      margin-top: 3vw
+      font-size: 6vw
     +atMedium
       font-size: 45px
       margin-top: 3vw
