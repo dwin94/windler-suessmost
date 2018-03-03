@@ -13,8 +13,8 @@
     <header>
       <div class="header">
         <picture>
-          <source srcset="assets/images/apples-header_rotate_tiny.jpg" media="(max-width: 500px)">
-          <source srcset="assets/images/apples-header_tiny.jpg" />
+          <source srcset="assets/images/apples-header_tiny.jpg" media="(min-width: 500px)" />
+          <source srcset="assets/images/apples-header_rotate_tiny.jpg">
           <img class="header__image" src="assets/images/apples-header_rotate_tiny.jpg" alt="Reife Äpfel" />
         </picture>
         <div class="header__circle">
@@ -28,6 +28,7 @@
         </div>
       </div>
       <nav class="navigation">
+        <div class="navigation__hamburger-icon"></div>
         <div class="wrapper">
           <ul class="navigation__list">
             <li class="navigation__entry">

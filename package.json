@@ -2,6 +2,7 @@
   "name": "windler-suessmost",
   "repository": "https://dwin94@bitbucket.org/dwin94/windler-suessmost.git",
   "author": "David <david.windler@windowslive.com>",
+  "license": "UNLICENSED",
   "browserslist": [
     "last 2 versions"
   ],
@@ -25,12 +26,9 @@
     "gulp-hash": "^4.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^5.0.0",
-    "ignore-loader": "^0.1.2",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.2",
-    "url-loader": "^1.0.1",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"
   }
