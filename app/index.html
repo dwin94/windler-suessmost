@@ -28,120 +28,127 @@
         </div>
       </div>
       <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__entry">
-            <a class="navigation__link" href="#products">Produkte</a>
-          </li>
-          <li class="navigation__entry">
-            <a class="navigation__link" href="#about">Über uns</a>
-          </li>
-          <li class="navigation__entry">
-            <a class="navigation__link" href="#contact">Kontakt</a>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <ul class="navigation__list">
+            <li class="navigation__entry">
+              <a class="navigation__link" href="#products">Produkte</a>
+            </li>
+            <li class="navigation__entry">
+              <a class="navigation__link" href="#about">Über uns</a>
+            </li>
+            <li class="navigation__entry">
+              <a class="navigation__link" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <section id="products" class="products">
-        <h1 class="products__title">Produkte</h1>
+        <div class="wrapper">
+          <h1 class="products__title">Produkte</h1>
 
-        <section id="suessmost" class="product columns">
-          <div class="columns__column-text">
-            <i class="product__icon icon-tint"></i>
-            <h1 class="product__title">Süssmost</h1>
-            <p class="product__text">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-          <div class="columns__column-image">
-            <img class="product__image" src="assets/images/products/frischer-apfelsaft-tropft-vom-band.jpg" alt="Frischer Apfelsaft tropft von der Bandpresse">
-          </div>
-          <!--TODO: show description on hover-->
-        </section>
+          <section id="suessmost" class="product columns">
+            <div class="columns__column-text">
+              <i class="product__icon icon-tint"></i>
+              <h1 class="product__title">Süssmost</h1>
+              <p class="product__text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+            <div class="columns__column-image">
+              <img class="product__image" src="assets/images/products/frischer-apfelsaft-tropft-vom-band.jpg" alt="Frischer Apfelsaft tropft von der Bandpresse">
+            </div>
+            <!--TODO: show description on hover-->
+          </section>
 
-        <section id="aepfel-ab-hof" class="product columns">
-          <div class="columns__column-image">
-            <img class="product__image" src="assets/images/products/obstanlage.jpg" alt="Bäume in unserer Obstanlage im Frühling">
-          </div>
-          <div class="columns__column-text">
-            <i class="product__icon icon-apple"></i>
-            <h1 class="product__title">Äpfel ab Hof</h1>
-            <p class="product__text">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-        </section>
+          <section id="aepfel-ab-hof" class="product columns">
+            <div class="columns__column-image">
+              <img class="product__image" src="assets/images/products/obstanlage.jpg" alt="Bäume in unserer Obstanlage im Frühling">
+            </div>
+            <div class="columns__column-text">
+              <i class="product__icon icon-apple"></i>
+              <h1 class="product__title">Äpfel ab Hof</h1>
+              <p class="product__text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+          </section>
 
-        <section id="kundenmosterei" class="product columns">
-          <div class="columns__column-text">
-            <i class="product__icon icon-handshake-o"></i>
-            <h1 class="product__title">Kundenmosterei</h1>
-            <p class="product__text">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-          <div class="columns__column-image">
-            <img class="product__image" src="assets/images/products/trester-rutscht-vom-band.jpg" alt="Trester rutscht von der Brandpresse">
-          </div>
-        </section>
+          <section id="kundenmosterei" class="product columns">
+            <div class="columns__column-text">
+              <i class="product__icon icon-handshake-o"></i>
+              <h1 class="product__title">Kundenmosterei</h1>
+              <p class="product__text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+            <div class="columns__column-image">
+              <img class="product__image" src="assets/images/products/trester-rutscht-vom-band.jpg" alt="Trester rutscht von der Brandpresse">
+            </div>
+          </section>
 
-        <section id="verschenken" class="product columns">
-          <div class="columns__column-image">
-            <img class="product__image" src="assets/images/products/unsere-produkte.jpg" alt="Verschiedene Most-Arten in unterschiedlichen PET-Flaschen, Bag-In-Box und Beuteln.">
-          </div>
-          <div class="columns__column-text">
-            <i class="product__icon icon-gift"></i>
-            <h1 class="product__title">Verschenken</h1>
-            <p class="product__text">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-        </section>
-
+          <section id="verschenken" class="product columns">
+            <div class="columns__column-image">
+              <img class="product__image" src="assets/images/products/unsere-produkte.jpg" alt="Verschiedene Most-Arten in unterschiedlichen PET-Flaschen, Bag-In-Box und Beuteln.">
+            </div>
+            <div class="columns__column-text">
+              <i class="product__icon icon-gift"></i>
+              <h1 class="product__title">Verschenken</h1>
+              <p class="product__text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+          </section>
+        </div>
       </section>
 
-      <section id="about" class="additional-section">
-        <h1 class="additional-section__title">Über uns</h1>
-        <p class="additional-section__text">
-          Oberhalb von Braunau...
-        </p>
-        <h2 class="additional-section__subtitle">Verkaufsorte</h2>
-        <div class="three-columns">
-          <div class="desktop-columns_mobile-rows">
-            <div>
-              <img src="" alt="" />
-              <p class="additional-section__text">Direkt ab Hof</p>
-            </div>
-            <div>
-              <img src="" alt="" />
-              <p class="additional-section__text">Dorfmarkt VITAplus<br />Wuppenau</p>
-            </div>
-            <div>
-              <img src="" alt="" />
-              <p class="additional-section__text">Dorfmarkt Zentrum<br />Tobel</p>
+      <section id="about" class="additional-section additional-section--white">
+        <div class="wrapper">
+          <h1 class="additional-section__title">Über uns</h1>
+          <p class="additional-section__text">
+            Oberhalb von Braunau...
+          </p>
+          <h2 class="additional-section__subtitle">Verkaufsorte</h2>
+          <div class="three-columns">
+            <div class="desktop-columns_mobile-rows">
+              <div>
+                <img src="" alt="" />
+                <p class="additional-section__text">Direkt ab Hof</p>
+              </div>
+              <div>
+                <img src="" alt="" />
+                <p class="additional-section__text">Dorfmarkt VITAplus<br />Wuppenau</p>
+              </div>
+              <div>
+                <img src="" alt="" />
+                <p class="additional-section__text">Dorfmarkt Zentrum<br />Tobel</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="additional-section">
-        <h1 class="additional-section__title">Kontakt</h1>
-        <p class="additional-section__text">
-          Bei Fragen oder Bestellungen können Sie uns folgendermassen erreichen:
-        </p>
-        <div class="desktop-columns_mobile-rows">
-          <div class="contact">
-            <i class="contact__icon icon-phone-outline"></i>
-            <a class="contact__link" href="tel:0719117647" rel="nofollow">071 911 76 47</a>
-          </div>
-          <div class="contact">
-            <i class="contact__icon icon-mail"></i>
-            <a class="contact__link" href="mailto:windler.suemo@bluewin.ch">windler.suemo@bluewin.ch</a>
-          </div>
-          <div class="contact">
-            <i class="contact__icon icon-map-o"></i>
-            <a class="contact__link" href="https://www.google.ch/maps/place/Windler+Max+und+Uta/@47.4961165,9.0655954,13.48z/data=!4m12!1m6!3m5!1s0x479aeea4e7513333:0x85b75cf963d37d7e!2sWindler+Max+und+Uta!8m2!3d47.4956325!4d9.0812881!3m4!1s0x479aeea4e7513333:0x85b75cf963d37d7e!8m2!3d47.4956325!4d9.0812881">Max und Uta Windler<br />Heid 320<br />9502 Braunau</a>
+      <section id="contact" class="additional-section additional-section--orange">
+        <div class="wrapper">
+          <h1 class="additional-section__title">Kontakt</h1>
+          <p class="additional-section__text">
+            Bei Fragen oder Bestellungen können Sie uns folgendermassen erreichen:
+          </p>
+          <div class="desktop-columns_mobile-rows">
+            <div class="contact">
+              <i class="contact__icon icon-phone-outline"></i>
+              <a class="contact__link" href="tel:0719117647" rel="nofollow">071 911 76 47</a>
+            </div>
+            <div class="contact">
+              <i class="contact__icon icon-mail"></i>
+              <a class="contact__link" href="mailto:windler.suemo@bluewin.ch">windler.suemo@bluewin.ch</a>
+            </div>
+            <div class="contact">
+              <i class="contact__icon icon-map-o"></i>
+              <a class="contact__link" href="https://www.google.ch/maps/place/Windler+Max+und+Uta/@47.4961165,9.0655954,13.48z/data=!4m12!1m6!3m5!1s0x479aeea4e7513333:0x85b75cf963d37d7e!2sWindler+Max+und+Uta!8m2!3d47.4956325!4d9.0812881!3m4!1s0x479aeea4e7513333:0x85b75cf963d37d7e!8m2!3d47.4956325!4d9.0812881">Max und Uta Windler<br />Heid 320<br />9502 Braunau</a>
+            </div>
           </div>
         </div>
       </section>
