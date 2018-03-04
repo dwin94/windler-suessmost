@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// const ManifestPlugin = require('webpack-manifest-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -9,12 +10,22 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/app/assets/dist',
+    filename: "main.js"
+    // filename: "main.[chunkhash].js"
   },
   module: {
     rules: [
-      /*
-      your other rules for JavaScript transpiling go in here
-      */
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [ 'env' ],
+            plugins: [ 'transform-class-properties' ]
+          }
+        }
+      },
       {
         test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
@@ -61,7 +72,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin({
       filename: '[name].css',
-      // filename: '[name].[chuckhash].css',
+      // filename: '[name].[contenthash].css',
       allChunks: true,
     }),
     new BrowserSyncPlugin({
@@ -71,6 +82,7 @@ module.exports = {
       server: {
         baseDir: ['app']
       }
-    })
+    }),
+    // new ManifestPlugin()
   ],
 };
