@@ -1,1 +1,132 @@
-!function(e){var n={};function t(o){if(n[o])return n[o].exports;var u=n[o]={i:o,l:!1,exports:{}};return e[o].call(u.exports,u,u.exports,t),u.l=!0,u.exports}t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=4)}([function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});n.getById=function(e){return document.getElementById(e)},n.onClick=function(e,n){return e.addEventListener("click",n)},n.toggleClass=function(e,n){return e.classList.toggle(n)}},function(e,n){},function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var o=t(0);n.default=function e(n){var t=this,u=n.menuIcon,i=n.menuList;!function(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}(this,e),this.events=function(){(0,o.onClick)(t.menuIcon,t.toggleMenu)},this.toggleMenu=function(){(0,o.toggleClass)(t.menuList,"navigation__list--visible")},this.menuIcon=u,this.menuList=i,this.events()}},function(e,n,t){"use strict";var o,u=t(0),i=t(2);new((o=i)&&o.__esModule?o:{default:o}).default({menuIcon:(0,u.getById)("menu-icon"),menuList:(0,u.getById)("menu-list")})},function(e,n,t){t(3),e.exports=t(1)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./app/assets/js/main.js":
+/*!*******************************!*\
+  !*** ./app/assets/js/main.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _Shortcuts = __webpack_require__(/*! ./modules/Shortcuts */ \"./app/assets/js/modules/Shortcuts.js\");\n\nvar _MobileMenu = __webpack_require__(/*! ./modules/MobileMenu */ \"./app/assets/js/modules/MobileMenu.js\");\n\nvar _MobileMenu2 = _interopRequireDefault(_MobileMenu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar mobileMenu = new _MobileMenu2.default({\n  menuIcon: (0, _Shortcuts.getById)('menu-icon'),\n  menuList: (0, _Shortcuts.getById)('menu-list')\n});\n\n//# sourceURL=webpack:///./app/assets/js/main.js?");
+
+/***/ }),
+
+/***/ "./app/assets/js/modules/MobileMenu.js":
+/*!*********************************************!*\
+  !*** ./app/assets/js/modules/MobileMenu.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Shortcuts = __webpack_require__(/*! ./Shortcuts */ \"./app/assets/js/modules/Shortcuts.js\");\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar MobileMenu = function MobileMenu(_ref) {\n  var _this = this;\n\n  var menuIcon = _ref.menuIcon,\n      menuList = _ref.menuList;\n\n  _classCallCheck(this, MobileMenu);\n\n  this.events = function () {\n    (0, _Shortcuts.onClick)(_this.menuIcon, _this.toggleMenu);\n  };\n\n  this.toggleMenu = function () {\n    (0, _Shortcuts.toggleClass)(_this.menuList, 'navigation__list--visible');\n  };\n\n  this.menuIcon = menuIcon;\n  this.menuList = menuList;\n  this.events();\n};\n\nexports.default = MobileMenu;\n\n//# sourceURL=webpack:///./app/assets/js/modules/MobileMenu.js?");
+
+/***/ }),
+
+/***/ "./app/assets/js/modules/Shortcuts.js":
+/*!********************************************!*\
+  !*** ./app/assets/js/modules/Shortcuts.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar getById = exports.getById = function getById(id) {\n  return document.getElementById(id);\n};\nvar onClick = exports.onClick = function onClick(element, fn) {\n  return element.addEventListener('click', fn);\n};\nvar toggleClass = exports.toggleClass = function toggleClass(element, className) {\n  return element.classList.toggle(className);\n};\n\n//# sourceURL=webpack:///./app/assets/js/modules/Shortcuts.js?");
+
+/***/ }),
+
+/***/ "./app/assets/styles/main.sass":
+/*!*************************************!*\
+  !*** ./app/assets/styles/main.sass ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./app/assets/styles/main.sass?");
+
+/***/ }),
+
+/***/ 0:
+/*!*******************************************************************!*\
+  !*** multi ./app/assets/js/main.js ./app/assets/styles/main.sass ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./app/assets/js/main.js */\"./app/assets/js/main.js\");\nmodule.exports = __webpack_require__(/*! ./app/assets/styles/main.sass */\"./app/assets/styles/main.sass\");\n\n\n//# sourceURL=webpack:///multi_./app/assets/js/main.js_./app/assets/styles/main.sass?");
+
+/***/ })
+
+/******/ });
