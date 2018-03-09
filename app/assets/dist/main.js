@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _Shortcuts = __webpack_require__(/*! ./modules/Shortcuts */ \"./app/assets/js/modules/Shortcuts.js\");\n\nvar _MobileMenu = __webpack_require__(/*! ./modules/MobileMenu */ \"./app/assets/js/modules/MobileMenu.js\");\n\nvar _MobileMenu2 = _interopRequireDefault(_MobileMenu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar mobileMenu = new _MobileMenu2.default({\n  menuIcon: (0, _Shortcuts.getById)('menu-icon'),\n  menuList: (0, _Shortcuts.getById)('menu-list')\n});\n\n//# sourceURL=webpack:///./app/assets/js/main.js?");
+eval("\n\n__webpack_require__(/*! ./modules/workerHandler */ \"./app/assets/js/modules/workerHandler.js\");\n\nvar _Shortcuts = __webpack_require__(/*! ./modules/Shortcuts */ \"./app/assets/js/modules/Shortcuts.js\");\n\nvar _MobileMenu = __webpack_require__(/*! ./modules/MobileMenu */ \"./app/assets/js/modules/MobileMenu.js\");\n\nvar _MobileMenu2 = _interopRequireDefault(_MobileMenu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar mobileMenu = new _MobileMenu2.default({\n  menuIcon: (0, _Shortcuts.getById)('menu-icon'),\n  menuList: (0, _Shortcuts.getById)('menu-list')\n});\n\n//# sourceURL=webpack:///./app/assets/js/main.js?");
 
 /***/ }),
 
@@ -104,6 +104,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar getById = exports.getById = function getById(id) {\n  return document.getElementById(id);\n};\nvar onClick = exports.onClick = function onClick(element, fn) {\n  return element.addEventListener('click', fn);\n};\nvar toggleClass = exports.toggleClass = function toggleClass(element, className) {\n  return element.classList.toggle(className);\n};\n\n//# sourceURL=webpack:///./app/assets/js/modules/Shortcuts.js?");
+
+/***/ }),
+
+/***/ "./app/assets/js/modules/workerHandler.js":
+/*!************************************************!*\
+  !*** ./app/assets/js/modules/workerHandler.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nif ('serviceWorker' in navigator) {\n  navigator.serviceWorker.register('./service-worker.js', { scope: './' }).then(function () {\n    console.log(\"Service Worker registered.\");\n  }).catch(function (err) {\n    console.log(\"Service Worker failed to register.\", err);\n  });\n}\n\n//# sourceURL=webpack:///./app/assets/js/modules/workerHandler.js?");
 
 /***/ }),
 

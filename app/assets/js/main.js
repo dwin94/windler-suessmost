@@ -1,3 +1,4 @@
+import './modules/workerHandler';
 import { getById } from './modules/Shortcuts';
 import MobileMenu from './modules/MobileMenu';
 
