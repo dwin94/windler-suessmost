@@ -1,11 +1,10 @@
 {
   "name": "Windler S\u00fcssmost",
-  "short_name": "Windler S\u00fcssmost",
+  "short_name": "S\u00fcssmost",
   "start_url": "index.html",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#FAFAFA",
-  "theme_color": "#FAFAFA",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5",
   "icons": [
     {
       "src": "assets/favicon/android-chrome-192x192.png",

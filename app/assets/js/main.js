@@ -1,4 +1,4 @@
-import './modules/workerHandler';
+import './modules/LazyLoader';
 import { getById } from './modules/Shortcuts';
 import MobileMenu from './modules/MobileMenu';
 

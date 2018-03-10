@@ -10,8 +10,8 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/app/assets/dist',
-    filename: "main.js"
-    // filename: "main.[chunkhash].js"
+    filename: "main.js",
+    // filename: "main.[chunkhash].js",
   },
   module: {
     rules: [
