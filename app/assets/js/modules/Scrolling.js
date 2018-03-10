@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
 
-export default function smoothScroll(diff, duration) {
+export default function smoothScroll(diff, duration, callback) {
   const startingY = window.pageYOffset;
   var start;
 
@@ -24,4 +24,6 @@ export default function smoothScroll(diff, duration) {
       }
     }
   )
+
+  callback && callback();
 }

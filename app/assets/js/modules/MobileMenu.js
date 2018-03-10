@@ -16,15 +16,28 @@ export default class MobileMenu {
   toggleMenu = () => {
     toggleClass(this.menuList, 'navigation__list--visible');
   }
-  scrollToElement = (event) => {
-    event.preventDefault();
-
-    const targetHash = event.target.hash;
+  getMenuItemTargetPosition = (targetHash) => {
     const target = targetHash.substring(1, targetHash.length);
     const targetPosition = getById(target).getBoundingClientRect();
+    return targetPosition.top;
+  }
+  getHeaderHeight = () => {
+    const navigation = getById('navigation');
+    return parseFloat(window.getComputedStyle(this.menuIcon).height);
+  }
+  isVisible = () => {
+    return window.getComputedStyle(this.menuIcon).display !== 'none';
+  }
+  scrollToElement = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
 
-    //TODO: check if mobile -> if true -> toggle menu and diff - menu.height
-    // this.toggleMenu();
-    smoothScroll(targetPosition.top, 1000);
+    const targetPosition = this.getMenuItemTargetPosition(event.target.hash);
+
+    if(this.isVisible()) {
+      smoothScroll(targetPosition - this.getHeaderHeight(), 1000, this.toggleMenu);
+    } else {
+      smoothScroll(targetPosition, 1000);
+    }
   }
 }
