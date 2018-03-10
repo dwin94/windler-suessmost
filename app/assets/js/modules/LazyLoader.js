@@ -3,8 +3,8 @@ export default function lazyLoad() {
   // Get all of the images that are marked up to lazy load
   const images = document.querySelectorAll('[data-src]');
   const config = {
-    // If the image gets within 50px in the Y axis, start the download.
-    rootMargin: '50px 0px',
+    // If the image gets within 0px in the Y axis, start the download.
+    rootMargin: '0px 0px',
     threshold: 0.01
   };
 
@@ -20,6 +20,13 @@ export default function lazyLoad() {
 
   images.forEach(image => {
     observer.observe(image);
+
+    // Set image placeholder to loaded image height (scrolling fix)
+    const imageWidth = parseFloat(window.getComputedStyle(image).width);
+    const ratio = parseFloat(image.dataset.ratio);
+    const imageHeight = ratio * imageWidth;
+
+    image.style.height = `${imageHeight}px`;
   });
 
   function onIntersection(entries) {
@@ -37,5 +44,6 @@ export default function lazyLoad() {
 
   function loadImage(image) {
     image.src = image.dataset.src;
+    image.style.height = 'auto';
   }
 }
