@@ -16,6 +16,11 @@ export default class Menu {
       onClick(menuPoint, this.scrollToElement)
     });
     onClick(this.headerArrowDown, this.scrollToElement);
+    onClick(window, (event) => {
+      if(!getById('navigation').contains(event.target)) {
+        this.closeMenu();
+      }
+    });
   }
 
   toggleMenu = () => {

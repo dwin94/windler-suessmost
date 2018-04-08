@@ -5,7 +5,7 @@ import Menu from './modules/MobileMenu';
 lazyLoad();
 
 const mobileMenu = new Menu({
-  menuButton: getById('menu-icon'),
+  menuButton: getById('menu-button'),
   menuList: getById('menu-list'),
   headerArrowDown: getById('header-arrow-down')
 });
