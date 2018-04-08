@@ -1,10 +1,11 @@
 import lazyLoad from './modules/LazyLoader';
 import { getById } from './modules/Shortcuts';
-import MobileMenu from './modules/MobileMenu';
+import Menu from './modules/MobileMenu';
 
 lazyLoad();
 
-const mobileMenu = new MobileMenu({
+const mobileMenu = new Menu({
   menuIcon: getById('menu-icon'),
-  menuList: getById('menu-list')
+  menuList: getById('menu-list'),
+  headerArrowDown: getById('header-arrow-down')
 });
