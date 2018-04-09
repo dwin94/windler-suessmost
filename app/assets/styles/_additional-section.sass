@@ -19,6 +19,28 @@
   &__text
     +text-font-size
     margin-bottom: 30px
+  
+  &__entry
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column
+    +minMedium
+      width: calc(100% / 3)
+
+  &__entry-icon
+    +icon-font-size
+    padding: 15px 0
+    +atMedium
+      padding-top: 20px
+
+  &__entry-link
+    +text-font-size
+    color: inherit
+    text-decoration: none
+    word-wrap: break-word
+    &:hover
+      text-decoration: underline
+
 
 .desktop-columns_mobile-rows
   display: flex
