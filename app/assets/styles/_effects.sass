@@ -15,3 +15,28 @@
     opacity: 1
     transform: none
     box-shadow: 0px 5px 8px rgba($black, 0.3)
+
+
+
+=reveal($direction)
+  @if $direction == 'left'
+    animation-name: revealFromLeft
+  @else
+    animation-name: revealFromRight
+
+  animation-duration: .8s
+  animation-fill-mode: both
+
+@keyframes revealFromLeft
+  0%
+    transform: translateX(-300px) rotate(-10deg)
+
+  100%
+    transform: rotate(5deg)
+
+@keyframes revealFromRight
+  0%
+    transform: translateX(300px) rotate(-20deg)
+  
+  100%
+    transform: rotate(-7deg)
