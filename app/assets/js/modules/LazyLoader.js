@@ -42,7 +42,6 @@ export default function lazyLoad(images) {
 
       // Stop watching and load the image
       observer.unobserve(entry.target);
-      addClass(entry.target, 'reveal-on-scroll--visible');
 
       if(entry.target.index % 2 == 0) {
         loadImage(entry.target, () => {
@@ -58,7 +57,6 @@ export default function lazyLoad(images) {
 
   function loadImage(image, callback) {
     image.src = image.dataset.src;
-    image.style.height = 'auto';
     callback ? callback() : null;
   }
 }
