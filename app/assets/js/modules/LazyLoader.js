@@ -23,12 +23,10 @@ export default function lazyLoad(images) {
     image.index = index;
     addClass(image, 'reveal-on-scroll');
 
-    // Set image placeholder to loaded image height (scrolling fix)
-    const imageWidth = parseFloat(window.getComputedStyle(image).width);
-    const ratio = parseFloat(image.dataset.ratio);
-    const imageHeight = ratio * imageWidth;
-
-    image.style.height = `${imageHeight}px`;
+    resizeImage(image);
+    window.addEventListener('resize', () => {
+      resizeImage(image);
+    });
   });
 
   function onIntersection(entries) {
@@ -54,9 +52,18 @@ export default function lazyLoad(images) {
       }
     });
   }
+}
 
-  function loadImage(image, callback) {
-    image.src = image.dataset.src;
-    callback ? callback() : null;
-  }
+function resizeImage(image) {
+  // Set image placeholder to loaded image height (scrolling fix)
+  const imageWidth = parseFloat(window.getComputedStyle(image).width);
+  const ratio = parseFloat(image.dataset.ratio);
+  const imageHeight = ratio * imageWidth;
+
+  image.style.height = `${imageHeight}px`;
+}
+
+function loadImage(image, callback) {
+  image.src = image.dataset.src;
+  callback ? callback() : null;
 }
