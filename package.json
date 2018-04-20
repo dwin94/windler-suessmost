@@ -11,7 +11,6 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
@@ -26,13 +25,11 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
     "gulp-hash": "^4.2.2",
-    "gulp-sass": "^3.1.0",
     "gulp-watch": "^5.0.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.1",
-    "sass-loader": "^6.0.7",
+    "sass-loader": "^7.0.1",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10",
     "webpack-manifest-plugin": "^2.0.0-rc.2"
