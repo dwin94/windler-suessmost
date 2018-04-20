@@ -39,9 +39,13 @@ export default class Menu {
     return targetPosition.top;
   }
 
-  getHeaderHeight = () => {
-    const navigation = getById('navigation');
+  getMenuHeight = () => {
     return parseFloat(window.getComputedStyle(this.menuButton).height);
+  }
+
+  getNavigationHeight = () => {
+    const navigation = getById('navigation');
+    return navigation.offsetHeight;
   }
 
   isVisible = () => {
@@ -56,10 +60,10 @@ export default class Menu {
 
     if(this.isVisible()) {
       // open mobile menu
-      smoothScroll(targetPosition - this.getHeaderHeight(), 1000, this.closeMenu);
+      smoothScroll(targetPosition - this.getMenuHeight(), 1000, this.closeMenu);
     } else {
       // desktop menu or closed mobile menu (header-arrow-down)
-      smoothScroll(targetPosition, 1000);
+      smoothScroll(targetPosition - this.getNavigationHeight(), 1000);
     }
   }
 }

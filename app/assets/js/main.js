@@ -1,7 +1,8 @@
 import lazyLoad from './modules/LazyLoader';
 import addHoverListener from './modules/ImageHover';
 import { getById } from './modules/Shortcuts';
-import Menu from './modules/MobileMenu';
+import Menu from './modules/Menu';
+import { createStickyNavigation } from './modules/Navigation';
 
 const images = document.querySelectorAll('[data-src]');
 lazyLoad(images);
@@ -12,3 +13,6 @@ const mobileMenu = new Menu({
   menuList: getById('menu-list'),
   headerArrowDown: getById('header-arrow-down')
 });
+
+const navigation = getById('navigation');
+createStickyNavigation(navigation);
