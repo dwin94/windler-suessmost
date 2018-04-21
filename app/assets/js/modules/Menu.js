@@ -2,11 +2,12 @@ import { onClick, toggleClass, removeClass, getById } from './Shortcuts';
 import smoothScroll from './Scrolling';
 
 export default class Menu {
-  constructor({ menuButton, menuList, headerArrowDown }) {
+  constructor({ menuButton, menuList, headerArrowDown, isMobile }) {
     this.menuButton = menuButton;
     this.menuIcon = menuButton.querySelector('.navigation__mobile-icon');
     this.menuList = menuList;
     this.headerArrowDown = headerArrowDown;
+    this.isMobile = isMobile;
     this.events();
   }
 
@@ -48,17 +49,13 @@ export default class Menu {
     return navigation.offsetHeight;
   }
 
-  isVisible = () => {
-    return window.getComputedStyle(this.menuButton).display !== 'none';
-  }
-
   scrollToElement = (event) => {
     event.preventDefault();
     event.stopPropagation();
 
     const targetPosition = this.getMenuItemTargetPosition(event.target.hash);
 
-    if(this.isVisible()) {
+    if(this.isMobile) {
       // open mobile menu
       smoothScroll(targetPosition - this.getMenuHeight(), 1000, this.closeMenu);
     } else {

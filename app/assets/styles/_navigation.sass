@@ -95,9 +95,20 @@
     height: 65px
     padding: 20px 0
     box-sizing: border-box
+    +atLarge
+      padding: 16px 0 24px
     &:hover
       background: $orange
       color: $white
       border-bottom: 5px solid $white
-    +atLarge
-      padding: 16px 0 24px
+    &--current-section
+      +maxSmall
+        border-left: 7px solid $black
+        border-right: 7px solid $black
+        color: $black
+      +minMedium
+        border-top: 7px solid $orange
+        padding-top: 13px
+      +atLarge
+        padding: 9px
+      
