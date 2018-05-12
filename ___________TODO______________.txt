@@ -1,0 +1,4 @@
+- Über uns sectino
+- Dorfmarkt etc. schreiben -> homepage
+- Google Analytics nach umstellung
+- Cache busting (usemin)

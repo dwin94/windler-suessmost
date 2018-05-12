@@ -13,15 +13,11 @@ export function createStickyNavigation(navigation, header, isMobile) {
 
         if (belowNavigation && !sticky) {
             addClass(navigation, 'navigation--sticky');
-            Object.assign(header.style, {
-                marginBottom: `${navigation.offsetHeight}px`,
-            });
+            header.style.marginBottom = `${navigation.offsetHeight}px`;
             sticky = true;
         } else if(!belowNavigation && sticky) {
             removeClass(navigation, 'navigation--sticky');
-            Object.assign(header.style, {
-                marginBottom: '0',
-            });
+            header.style.marginBottom = '0';
             sticky = false;
         }
     });

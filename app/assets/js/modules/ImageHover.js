@@ -24,14 +24,10 @@ function handleMouseEnter(image) {
     const text = createTextElement(image);
     const divContainer = createDivContainer(text, image);
 
-    Object.assign(image.parentNode.style, {
-        position: 'relative'
-    });
+    image.parentNode.style.position = 'relative';
 
-    Object.assign(divContainer.style, {
-        animationDuration: '0s',
-        position: 'absolute'
-    });
+    divContainer.style.animationDuration = '0s';
+    divContainer.style.position = 'absolute';
 
     image.parentNode.appendChild(divContainer);
     handleMouseLeave(divContainer, text);

@@ -52,6 +52,16 @@
     +atLarge
       margin: 20px 0 0
 
+  &__list
+    +text-font-size
+    +maxSmall
+      margin: 20px auto
+    +atMedium
+     width: 65%
+    +atLarge
+      text-align: center
+      width: 55%
+
   &__image
     width: 100%
     max-width: 400px
@@ -59,21 +69,21 @@
     height: auto
     box-shadow: 5px 5px 20px 0px $orange-shadow
     +minMedium
-      margin-bottom: -10px
+      // margin-bottom: -10px
     +atLarge
-      margin-bottom: -30px
+      // margin-bottom: -30px
 
   &:nth-of-type(odd) &__image
     +atMedium
       margin-left: 10px
     +atLarge
-      margin: auto auto -30px 5vw      
+      // margin: auto auto -30px 5vw      
 
   &:nth-of-type(even) &__image
     +atMedium
       margin-right: 10px
     +atLarge
-      margin: auto 5vw -30px auto
+      // margin: auto 5vw -30px auto
 
 .columns
   display: flex
@@ -96,14 +106,14 @@
 
   &__column-image
     width: 100%
-    padding: 25px
+    padding: 25px 25px 0 25px
     order: 2
     +atSmall
       padding: 40px
     +minMedium
       width: 50%
       order: 0
-      padding: 40px
+      padding: 40px 40px 0 40px
       align-content: flex-end
 
   &:nth-of-type(odd) &__column-text,
