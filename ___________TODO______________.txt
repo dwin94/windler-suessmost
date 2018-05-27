@@ -1,4 +1,6 @@
-- Über uns sectino
 - Dorfmarkt etc. schreiben -> homepage
-- Google Analytics nach umstellung
+- Google Analytics nach umstellung -> datenschutz
 - Cache busting (usemin)
+- automatic deployment
+- Contact formular
+- Setup react for sth.
