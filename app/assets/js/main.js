@@ -6,9 +6,12 @@ import { createStickyNavigation, highlightCurrentSection } from './modules/Navig
 
 const isMobile = window.getComputedStyle(getById('menu-button')).display !== 'none'
 
-const images = document.querySelectorAll('[data-src]');
-lazyLoad(images);
-addHoverListener(images);
+const productImages = document.querySelectorAll('.products [data-src]');
+lazyLoad(productImages, true);
+addHoverListener(productImages);
+
+const otherImages = document.querySelectorAll('[data-src]:not(.reveal-on-scroll)');
+lazyLoad(otherImages, false);
 
 const mobileMenu = new Menu({
   menuButton: getById('menu-button'),

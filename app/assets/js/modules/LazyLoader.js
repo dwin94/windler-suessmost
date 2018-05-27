@@ -1,11 +1,16 @@
 import { addClass } from './Shortcuts';
 
-export default function lazyLoad(images) {
+export default function lazyLoad(images, hasAnimation) {
 
-  const config = {
-    // If the image gets within 0px in the Y axis, start the download.
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 1.0
+  const config = hasAnimation
+    ? {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 1.0
+    }
+    : {
+      // If the image gets within 0px in the Y axis, start the download.
+      rootMargin: '0px 0px 100% 0px',
+      threshold: 1.0
   };
 
   if(!('IntersectionObserver' in window)) {
@@ -21,7 +26,9 @@ export default function lazyLoad(images) {
   images.forEach((image, index) => {
     observer.observe(image);
     image.index = index;
-    addClass(image, 'reveal-on-scroll');
+    if (hasAnimation) {
+      addClass(image, 'reveal-on-scroll');
+    }
 
     resizeImage(image);
     window.addEventListener('resize', () => {
@@ -41,16 +48,20 @@ export default function lazyLoad(images) {
       // Stop watching and load the image
       observer.unobserve(entry.target);
 
-      if(entry.target.index % 2 == 0) {
-        loadImage(entry.target, () => {
-          addClass(entry.target, 'reveal-on-scroll--fade-in-right');
-        });
-      } else {
-        loadImage(entry.target, () => {
-          addClass(entry.target, 'reveal-on-scroll--fade-in-left');
-        });
-      }
+      loadImage(entry.target, () => hasAnimation ? addFadeInDirection(entry) : null);
     });
+  }
+
+  function addFadeInDirection(entry) {
+    if(entry.target.index % 2 == 0) {
+      addClass(entry.target, 'reveal-on-scroll--fade-in-right');
+    } else {
+      addClass(entry.target, 'reveal-on-scroll--fade-in-left');
+    }
+  }
+
+  function fadeInLeft(entry) {
+    addClass(entry.target, 'reveal-on-scroll--fade-in-left');
   }
 }
 
