@@ -22,17 +22,6 @@
   &__text,
     text-align: center
     width: 100%
-
-
-  &:nth-of-type(odd) &__icon,
-  &:nth-of-type(odd) &__title,
-  &:nth-of-type(odd) &__text,
-    +minMedium
-      text-align: right
-
-  &:nth-of-type(even) &__icon,
-  &:nth-of-type(even) &__title,
-  &:nth-of-type(even) &__text,
     +minMedium
       text-align: left
 
@@ -47,20 +36,16 @@
 
   &__text
     +text-font-size
-    max-width: 500px
     margin: 20px auto 0
     +atLarge
       margin: 20px 0 0
 
   &__list
     +text-font-size
-    +maxSmall
-      margin: 20px auto
-    +atMedium
-     width: 65%
-    +atLarge
-      text-align: center
-      width: 55%
+    margin: 20px auto 0
+    +minMedium
+      width: 100%
+      margin: 20px 0 0 20px
 
   &__image
     width: 100%
@@ -68,22 +53,14 @@
     margin: auto
     height: auto
     box-shadow: 5px 5px 20px 0px $orange-shadow
-    +minMedium
-      // margin-bottom: -10px
-    +atLarge
-      // margin-bottom: -30px
 
   &:nth-of-type(odd) &__image
     +atMedium
       margin-left: 10px
-    +atLarge
-      // margin: auto auto -30px 5vw      
 
   &:nth-of-type(even) &__image
     +atMedium
       margin-right: 10px
-    +atLarge
-      // margin: auto 5vw -30px auto
 
 .columns
   display: flex
@@ -97,12 +74,20 @@
 
   &__column-text
     width: 100%
+    max-width: 500px
     display: flex
     flex-wrap: wrap
     align-content: flex-end
     padding: 20px 0
+    +maxSmall
+      margin: auto
     +minMedium
       width: 50%
+
+  &:nth-of-type(odd) &__column-text
+    +minMedium
+      justify-content: flex-end
+      margin-left: auto
 
   &__column-image
     width: 100%
@@ -114,8 +99,5 @@
       width: 50%
       order: 0
       padding: 40px 40px 0 40px
+      margin-top: 20px
       align-content: flex-end
-
-  &:nth-of-type(odd) &__column-text,
-    +minMedium
-      justify-content: flex-end
