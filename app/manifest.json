@@ -1,6 +1,7 @@
 {
   "name": "Windler S\u00fcssmost",
   "short_name": "S\u00fcssmost",
+  "version": "1.0",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
@@ -8,17 +9,17 @@
   "theme_color": "#f5f5f5",
   "icons": [
     {
-      "src": "assets/favicon/android-chrome-192x192.png",
+      "src": "assets/favicon/android-chrome-192x192.png?v=1",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/favicon/android-chrome-256x256.png",
+      "src": "assets/favicon/android-chrome-256x256.png?v=1",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "assets/favicon/android-chrome-512x512.png",
+      "src": "assets/favicon/android-chrome-512x512.png?v=1",
       "sizes": "512x512",
       "type": "image/png"
     }
