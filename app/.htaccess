@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.windler.party/$1 [R,L]
+RewriteRule ^(.*)$ https://www.windler-suessmost.ch/$1 [R,L]
 
 AddType application/javascript .js
 
