@@ -1,3 +1,4 @@
+Improve here: https://realfavicongenerator.net/favicon_checker?protocol=http&site=windler.party
 - Dorfmarkt etc. schreiben -> homepage
 - Google Analytics nach umstellung -> datenschutz
 - Cache busting (usemin)
