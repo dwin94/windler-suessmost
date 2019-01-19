@@ -1,8 +1,0 @@
-Improve here: https://realfavicongenerator.net/favicon_checker?protocol=http&site=windler.party
--> more icons, etc.
-- Dorfmarkt etc. schreiben -> homepage
-- Google Analytics nach umstellung -> datenschutz
-- Cache busting (usemin)
-- automatic deployment
-- Contact formular
-- Setup react for sth.
