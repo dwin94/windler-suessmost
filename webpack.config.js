@@ -2,6 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 // const ManifestPlugin = require('webpack-manifest-plugin');
 const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 module.exports = {
   entry: [
@@ -30,18 +31,19 @@ module.exports = {
         test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
           use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true
-              }
-            },
+            'css-loader',
             {
               loader: 'postcss-loader',
               options: {
                 plugins: () => [autoprefixer({
                       browsers: ['last 2 versions'],
                       cascade: false
+                  }), cssnano({
+                    preset: ['default', {
+                      discardComments: {
+                        removeAll: true,
+                      },
+                    }]
                   })]
               }
             },
