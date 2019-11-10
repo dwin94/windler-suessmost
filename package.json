@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "dev": "webpack --watch --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "update": "npx npm-check -u"
   },
   "dependencies": {
     "normalize-scss": "^7.0.1"
