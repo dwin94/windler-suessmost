@@ -2,7 +2,6 @@
   "name": "windler-suessmost",
   "repository": "https://dwin94@bitbucket.org/dwin94/windler-suessmost.git",
   "author": "David <david.windler@windowslive.com>",
-  "license": "UNLICENSED",
   "browserslist": [
     "last 2 versions"
   ],
