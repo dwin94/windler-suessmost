@@ -59,10 +59,6 @@ export default function lazyLoad(images, hasAnimation) {
       addClass(entry.target, 'reveal-on-scroll--fade-in-left');
     }
   }
-
-  function fadeInLeft(entry) {
-    addClass(entry.target, 'reveal-on-scroll--fade-in-left');
-  }
 }
 
 function resizeImage(image) {
