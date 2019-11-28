@@ -8,6 +8,7 @@ self.addEventListener("install", event => {
         cache.addAll([
           "/",
           "/index.html",
+          "/datenschutz.html",
           "/favicon.ico",
           "/assets/dist/main.css",
           "/assets/dist/main.js",
