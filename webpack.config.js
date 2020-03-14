@@ -1,7 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-// const ManifestPlugin = require('webpack-manifest-plugin');
-const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 module.exports = {
@@ -12,7 +10,6 @@ module.exports = {
   output: {
     path: __dirname + '/app/assets/dist',
     filename: "main.js",
-    // filename: "main.[chunkhash].js",
   },
   module: {
     rules: [
@@ -22,8 +19,8 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [ '@babel/preset-env' ],
-            plugins: [ '@babel/plugin-proposal-class-properties' ]
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
           }
         }
       },
@@ -35,24 +32,23 @@ module.exports = {
             {
               loader: 'postcss-loader',
               options: {
-                plugins: () => [autoprefixer({
-                      browsers: ['last 2 versions'],
-                      cascade: false
-                  }), cssnano({
-                    preset: ['default', {
-                      discardComments: {
-                        removeAll: true,
-                      },
-                    }]
-                  })]
+                plugins: () => [cssnano({
+                  preset: ['default', {
+                    discardComments: {
+                      removeAll: true,
+                    },
+                  }]
+                })]
               }
             },
             {
               loader: 'sass-loader',
               options: {
+                sassOptions: {
                   includePaths: [
                     './node_modules/normalize-scss/sass'
                   ]
+                }
               }
             }
           ]
@@ -74,7 +70,6 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin({
       filename: '[name].css',
-      // filename: '[name].[contenthash].css',
       allChunks: true,
     }),
     new BrowserSyncPlugin({
@@ -85,6 +80,5 @@ module.exports = {
         baseDir: ['app']
       }
     }),
-    // new ManifestPlugin()
   ],
 };
