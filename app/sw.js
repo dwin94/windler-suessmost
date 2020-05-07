@@ -1,4 +1,4 @@
-const cacheName = "windler-cache-v1";
+const cacheName = "windler-cache-v2";
 
 self.addEventListener("install", event => {
   event.waitUntil(

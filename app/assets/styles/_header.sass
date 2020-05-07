@@ -8,6 +8,16 @@ $circle-size: 42vw
   height: 54vw
   overflow: hidden
 
+  &__video-wrapper
+    +maxSmall
+      display: none
+    +minMedium
+      pointer-events: none
+      margin-top: -10px // prevent black border top
+
+  &__video-thumbnail
+    min-width: 100%
+
   &__image
     width: 100%
 
